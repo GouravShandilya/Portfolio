@@ -47,7 +47,7 @@ onMounted(() => {
     scrollTrigger: {
       trigger: '.wrap',
       start: '0% 10%',
-      end: `${window.innerWidth > 648 ? ' bottom 80%' : '40% 40%'}`,
+      end: `${window.innerWidth > 648 ? 'bottom 80%' : '40% 40%'}`,
       scrub: true,
     },
   })
@@ -60,7 +60,6 @@ onMounted(() => {
   line-height: clamp(3rem, 10.4vw - 3rem, 10.4vw - 3rem);
   font-weight: 400;
   color: rgba(0, 0, 0, 0.8);
-  /* position: absolute; */
   z-index: 1;
 }
 </style>
