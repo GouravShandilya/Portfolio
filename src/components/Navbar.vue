@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between sticky top-0 w-full z-10 navbar">
       <p class="py-2 px-2 text-lg sm:text-3xl sm:py-3 sm:px-6 font-light cursor-pointer">
         Gourav
-        <span class="text-xl font-light font-mono">Shandilya..</span>
+        <span class="text-xl font-light font-mono">Shandilya</span>
       </p>
       <div class="gap-8 items-center hidden sm:flex">
         <p class="text-md py-3 px-6 font-light bg-gray-400 rounded-[25px]">Available for Work</p>

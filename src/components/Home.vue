@@ -49,7 +49,6 @@ onMounted(() => {
       start: '0% 10%',
       end: `${window.innerWidth > 648 ? ' bottom 80%' : '40% 40%'}`,
       scrub: true,
-      markers: true,
     },
   })
 })
