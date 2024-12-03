@@ -3,7 +3,19 @@
 </template>
 
 <script setup>
+import Lenis from 'lenis'
 import { RouterView } from 'vue-router'
+
+const lenis = new Lenis({
+  wheelMultiplier: 0.5,
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
 </script>
 
 <style lang="scss">
