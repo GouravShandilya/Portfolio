@@ -2,35 +2,24 @@
   <div id="footer">
     <div class="relative w-full h-screen">
       <div class="flex flex-col gap-10 sm:gap-4 ml-2 sm:ml-[10vw] h-full">
-        <p class="font uppercase">
-          Lets <br /><span class="ml-16"> connect</span>
-        </p>
+        <p class="font uppercase">Lets <br /><span class="ml-16"> connect</span></p>
         <div
-          class="flex gap-[5rem] sm:gap-8 w-full flex-col-reverse items-start sm:flex-1 justify-between"
+          class="flex gap-[5rem] sm:gap-8 w-full flex-col-reverse items-start flex-1 justify-between"
         >
-          <div
-            class="flex gap-2 sm:gap-8 items-end w-full justify-end flex-wrap"
-          >
-            <span
-              class="sm:text-4xl text-md btn font-light sm:mt-8 border-b sm:py-4"
+          <div class="flex gap-2 sm:gap-8 items-end w-full justify-end flex-wrap">
+            <span class="sm:text-4xl text-md btn font-light sm:mt-8 border-b sm:py-4"
               >X (Twitter) <i class="ri-arrow-right-up-line"></i
             ></span>
-            <span
-              class="sm:text-4xl text-md btn font-light sm:mt-8 border-b sm:py-4"
+            <span class="sm:text-4xl text-md btn font-light sm:mt-8 border-b sm:py-4"
               >Instagram<i class="ri-arrow-right-up-line"></i>
             </span>
-            <span
-              class="sm:text-4xl text-md btn font-light sm:mt-8 border-b-2 sm:py-4"
+            <span class="sm:text-4xl text-md btn font-light sm:mt-8 border-b-2 sm:py-4"
               >Linkedin<i class="ri-arrow-right-up-line"></i
             ></span>
           </div>
           <div class="connect w-full sm:w-[50%] mt-28">
             <ul class="flex gap-3 font-mono capitalize text-gray-400">
-              <li
-                :class="{ active: index == current }"
-                v-for="(l, index) in list"
-                :key="index"
-              >
+              <li :class="{ active: index == current }" v-for="(l, index) in list" :key="index">
                 {{ l }}
               </li>
             </ul>
@@ -84,12 +73,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-const list = ref(["name", "email", "message"]);
-const current = ref(0);
-const name = ref(null);
-const email = ref(null);
-const msg = ref(null);
+import { ref, onMounted } from 'vue'
+const list = ref(['name', 'email', 'message'])
+const current = ref(0)
+const name = ref(null)
+const email = ref(null)
+const msg = ref(null)
 
 // document.addEventListener("keydown", (e) => {
 //   if (e.key == "Enter") {
@@ -116,7 +105,7 @@ const msg = ref(null);
   cursor: pointer;
 }
 .btn::before {
-  content: "";
+  content: '';
   width: 0%;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.8);

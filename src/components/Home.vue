@@ -16,11 +16,11 @@
         ></i>
       </div>
     </div>
-    <div class="section-2 text-2xl ml-2 sm:ml-[10.4vw] mb-20 sm:flex justify-between">
-      <h3 class="sm:w-full w-[70%] font-[500]">
+    <div class="section-2 text-2xl ml-2 sm:ml-[10.4vw] mb-20 sm:flex justify-between py-5 px-3">
+      <h3 class="sm:w-full w-[70%] font-[500] text-lg">
         I build digital platforms that keep the user connected.
       </h3>
-      <p class="text-wrap-balance w-full sm:w-[40%] mt-8 sm:mt-4">
+      <p class="text-balance w-full sm:w-[40%] mt-8 sm:mt-4 text-lg">
         In a digital world where the focus often lies on an efficient user experience, I want to add
         an extra layer of joy. I believe that is what leaves a lasting impression.
       </p>
