@@ -1,9 +1,7 @@
 <template>
-  <section
-    class="skills flex flex-col items-center justify-center gap-4 mt-[10rem]"
-  >
+  <section class="skills flex flex-col items-center justify-center gap-4 mt-[10rem]">
     <p class="text-center sm:mb-20 w-full">
-      <span class="font px-2 py-5 text-[2rem] sm:text-[4rem]">Skills</span>
+      <span class="font px-2 py-5 text-[lg] sm:text-4xl header">Skills</span>
     </p>
     <div>
       <div
@@ -42,16 +40,6 @@
 <script setup></script>
 
 <style scoped>
-.font {
-  /* font-size: clamp(2rem, 15.4vw - 1rem, 15.4vw - 2rem); */
-  /* line-height: clamp(2rem, 15.4vw - 1rem, 15.4vw - 2rem); */
-  /* transform: translateX(-50%); */
-  /* margin-left: 10vw; */
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.8);
-  /* position: absolute; */
-  /* z-index: 1; */
-}
 .ri-4x,
 img,
 svg {

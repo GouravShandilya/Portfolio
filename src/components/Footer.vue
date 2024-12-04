@@ -93,12 +93,13 @@ const msg = ref(null)
   line-height: clamp(2rem, 10.4vw - 1rem, 10.4vw - 2rem);
   margin-top: 4rem;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.8);
+  /* color: rgba(0, 0, 0, 0.8); */
   position: relative;
   z-index: 1;
 }
 .active {
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--color-fg-bold);
+  border-bottom: 1px solid var(--color-fg-bold);
 }
 .btn {
   position: relative;
@@ -108,7 +109,7 @@ const msg = ref(null)
   content: '';
   width: 0%;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--color-fg-bold);
   position: absolute;
   bottom: -5%;
   left: 4%;

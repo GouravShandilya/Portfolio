@@ -6,7 +6,7 @@
       :key="item.link"
     >
       <div class="content h-full flex flex-col justify-between py-8 px-4 w-full sm:w-[40%]">
-        <h4 class="text-3xl">{{ item.tittle }}</h4>
+        <h4 class="text-3xl header">{{ item.tittle }}</h4>
         <div class="option flex flex-col gap-8">
           <p class="text-balance opacity-90 text-sm">{{ item.desc }}</p>
           <a :href="item.link" class="text-md btn w-fit"
@@ -51,8 +51,8 @@ onMounted(() => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.project-wrapper',
-      start: '0% 30%',
-      end: '40% 10%',
+      start: '0% 50%',
+      end: '80% 50%',
       scrub: true,
     },
   })
@@ -65,13 +65,13 @@ onMounted(() => {
       duration: 3,
       y: '70%',
       opacity: 0,
-      ease: 'power1.easeIn',
+      transition: 'all ease-in',
     })
     tl.from(imgWrappers[index], {
       duration: 3,
       scale: 0,
       opacity: 0,
-      ease: 'power1.easeIn',
+      transition: 'all ease-in',
     })
   })
 })
@@ -85,10 +85,10 @@ onMounted(() => {
   content: '';
   width: 0%;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--color-fg-bold);
   position: absolute;
-  bottom: -5%;
-  left: 4%;
+  bottom: -8%;
+  left: 2%;
   transition: all 0.4s ease;
 }
 .btn:hover::before {

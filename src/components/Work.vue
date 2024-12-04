@@ -1,7 +1,10 @@
 <template>
-  <div class="sm:py-4 sm:px-8">
+  <div class="sm:py-16 sm:px-8">
+    <h2 class="text-3xl py-3 px-4 header">
+      Take a Look at <br />
+      <span>My Projects</span>
+    </h2>
     <div class="w-full h-fit py-5 px-3 sm:flex justify-between gap-4 sm:gap-2">
-      <h2 class="text-3xl py-3">My Projects</h2>
       <div class="img-wrap h-fit sm:h-[430px]" v-for="i in list" :key="i.link">
         <img
           :src="i.img"
@@ -54,7 +57,7 @@ const list = ref([
     width: 50%;
     cursor: pointer;
     button {
-      color: rgba(0, 0, 0, 0.9);
+      color: var(--color-fg-bold);
       i {
         visibility: visible;
       }

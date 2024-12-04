@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="section-1 h-screen relative">
       <div class="text px-2 sm:flex">
-        <h1 class="font mt-[4rem] relative sm:absolute sm:ml-[10vw]" ref="text">
+        <h1 class="font header mt-[4rem] relative sm:absolute sm:ml-[10vw]" ref="text">
           <span class="sm:ml-[10.4vw]">A FRONT END </span><br />DEVELOPER <br />WHO LOVES
           <br />DESIGN
         </h1>
@@ -54,12 +54,11 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .font {
   font-size: clamp(3rem, 10.4vw - 3rem, 10.4vw - 3rem);
   line-height: clamp(3rem, 10.4vw - 3rem, 10.4vw - 3rem);
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
 </style>

@@ -1,0 +1,62 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+$bg: white;
+$bgSecondary: rgba(255, 255, 255, 0.8);
+$color: rgba(0, 0, 0, 0.7);
+$colorSecondary: rgba(0, 0, 0, 0.9);
+:root {
+  color-scheme: dark light;
+}
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+// [data-theme='light'] {
+//   $bg: white;
+//   $bgSecondary: rgba(255, 255, 255, 0.8);
+//   $color: rgba(0, 0, 0, 0.7);
+//   $colorSecondary: rgba(0, 0, 0, 0.9);
+// }
+// [data-theme='dark'] {
+//   $bg: black;
+//   $bgSecondary: rgba(0, 0, 0, 0.8);
+//   $color: rgba(255, 255, 255, 0.7);
+//   $colorSecondary: rgba(255, 255, 255, 0.9);
+// }
+
+[data-theme='light'] {
+  --color-bg: #ffffff;
+  --color-fg: #474747;
+  --color-fg-bold: rgba(0, 0, 0, 0.8);
+}
+
+[data-theme='dark'] {
+  --color-bg: #000000;
+  --color-fg: #999999;
+  --color-fg-bold: rgba(255, 255, 255, 0.8);
+}
+.header {
+  color: var(--color-fg-bold);
+}
+html,
+body {
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  transition: all var(--color-bg) ease-in-out;
+  //   background-color: dark-light(dark, light);
+  //   color: dark-light(dark light);
+  //   font-size: calc(8px + 0.5vw);
+  text-decoration: none;
+}
