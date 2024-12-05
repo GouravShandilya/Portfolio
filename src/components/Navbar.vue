@@ -11,6 +11,7 @@
           <i class="ri-sun-fill ri-xl cursor-pointer" v-else></i>
         </button>
         <div class="gap-8 items-center hidden sm:flex">
+          <a @click="$router.push({ name: 'about' })" class="cursor-pointer">About</a>
           <p class="text-md py-3 px-6 font-light border rounded-[25px]">Available for Work</p>
           <p
             class="text-md py-3 px-6 font-light border rounded-[25px] connect"

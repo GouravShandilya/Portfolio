@@ -52,11 +52,12 @@ html.lenis {
 html,
 body {
   overflow-x: hidden;
+  transition:
+    background-color 1s ease-in-out,
+    color 1s ease-in-out;
   background-color: var(--color-bg);
   color: var(--color-fg);
-  transition: all var(--color-bg) ease-in-out;
   //   background-color: dark-light(dark, light);
   //   color: dark-light(dark light);
-  //   font-size: calc(8px + 0.5vw);
   text-decoration: none;
 }
