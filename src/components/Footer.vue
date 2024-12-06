@@ -17,7 +17,7 @@
               >Linkedin<i class="ri-arrow-right-up-line"></i
             ></span>
           </div>
-          <div class="connect w-full sm:w-[50%] mt-28">
+          <div class="connect w-full sm:w-[50%] mt-28" v-if="!success">
             <ul class="flex gap-3 font-mono capitalize text-gray-400">
               <li :class="{ active: index == current }" v-for="(l, index) in list" :key="index">
                 {{ l }}
@@ -52,10 +52,20 @@
                   @keyup.enter="current < 2 ? current++ : (current = 0)"
                   autofocus="true"
                 />
-                <i
-                  class="ri-arrow-right-line ri-2x"
-                  @click="current < 2 ? current++ : (current = 0)"
-                ></i>
+                <div class="btn-container ml-2">
+                  <i
+                    class="ri-arrow-right-line ri-2x"
+                    v-if="current < 2"
+                    @click="current < 2 ? current++ : (current = 0)"
+                  ></i>
+                  <button
+                    v-else
+                    @click="sendEmail"
+                    class="bg-[rgba(0,0,0,0.6)] text-white p-2 rounded-md border-none outline-none"
+                  >
+                    submit
+                  </button>
+                </div>
               </div>
               <button
                 v-if="current > 0"
@@ -66,6 +76,9 @@
               </button>
             </div>
           </div>
+          <div class="connect w-full sm:w-[50%] mt-28" v-else>
+            <p class="text-center text-white font-mono">Message sent successfully</p>
+          </div>
         </div>
       </div>
     </div>
@@ -73,18 +86,47 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, inject } from 'vue'
+import emailjs from '@emailjs/browser'
 const list = ref(['name', 'email', 'message'])
+
+//variables
 const current = ref(0)
 const name = ref(null)
 const email = ref(null)
 const msg = ref(null)
+const success = ref(false)
 
-// document.addEventListener("keydown", (e) => {
-//   if (e.key == "Enter") {
-//     current.value < 2 ? current.value++ : (current.value = 0);
-//   }
-// });
+const swal = inject('$swal')
+function sendEmail() {
+  if (!email.value && !msg.value)
+    return swal({ icon: 'error', title: 'email and message is madatory' })
+  if (msg.value.length < 20)
+    return swal({ icon: 'error', title: 'message should be 20 charachter or more' })
+  const templateParams = {
+    client_name: name.value ? name.value : 'Portfolio-viewer',
+    email: email.value,
+    message: msg.value,
+  }
+  emailjs
+    .send(
+      import.meta.env.VITE_EMAIL_SERVICE_ID,
+      import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+      templateParams,
+      import.meta.env.VITE_EMAIL_USER_ID,
+    )
+    .then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text)
+        success.value = true
+        name.value = email.value = msg.value = null
+      },
+      (error) => {
+        success.value = false
+        console.log('FAILED...', error)
+      },
+    )
+}
 </script>
 
 <style scoped>
