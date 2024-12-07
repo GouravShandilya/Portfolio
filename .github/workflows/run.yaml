@@ -25,11 +25,11 @@ jobs:
         run: npm install
 
       - name: Build
+        run: npm run build
         env:
           VITE_EMAIL_SERVICE_ID: ${{ vars.VITE_EMAIL_SERVICE_ID }}
           VITE_EMAIL_TEMPLATE_ID: ${{vars.VITE_EMAIL_TEMPLATE_ID}}
           VITE_EMAIL_USER_ID: ${{vars.VITE_EMAIL_USER_ID}}
-        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
