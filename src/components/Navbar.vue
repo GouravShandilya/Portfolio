@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between sticky top-0 w-full z-10 navbar">
       <p class="py-2 px-2 text-lg sm:text-3xl sm:py-3 sm:px-6 font-light cursor-pointer">
         Gourav
-        <span class="text-xl font-light font-mono">Shandilya..</span>
+        <span class="text-xl font-light font-mono">Shandilya..{{ baseUrl }}</span>
       </p>
       <div class="flex items-center gap-3">
         <button @click="ToggleEvent()">
@@ -27,8 +27,9 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, computed } from 'vue'
 
+const baseUrl = computed(() => import.meta.env.VITE_EMAIL_SERVICE_ID)
 const isDark = ref(false)
 
 function handleClick(to) {

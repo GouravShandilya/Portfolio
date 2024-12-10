@@ -24,19 +24,6 @@ html.lenis {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
-// [data-theme='light'] {
-//   $bg: white;
-//   $bgSecondary: rgba(255, 255, 255, 0.8);
-//   $color: rgba(0, 0, 0, 0.7);
-//   $colorSecondary: rgba(0, 0, 0, 0.9);
-// }
-// [data-theme='dark'] {
-//   $bg: black;
-//   $bgSecondary: rgba(0, 0, 0, 0.8);
-//   $color: rgba(255, 255, 255, 0.7);
-//   $colorSecondary: rgba(255, 255, 255, 0.9);
-// }
-
 [data-theme='light'] {
   --color-bg: #ffffff;
   --color-fg: #474747;
